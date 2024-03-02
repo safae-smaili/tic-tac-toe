@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script> 
+</head>
+<body>
+    <main>
+    <div class="container" id="main">
+        <!-- player turn -->
+        <div class="turn">
+            <i class="fa-solid fa-x" id="icon1"></i>
+            <p id="whosturn">Player 1,you're up!</p>
+        </div>
+        <!-- menu -->
+        <div class="menu">
+            <!-- <select class="menu" name="rond" id="test">
+                <option name="Action" selected>Action</option>
+                <option name="new">new rond</option>
+            </select> -->
+           
+            <button class="action" id="menu" data-id="menu-btn">
+                Actions
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="items border hidden" id="menu_items" >
+                <button data-id="reset-btn">Reset</button>
+                <button data-id="new-btn">New Round</button>
+            </div>
+              
+
+        </div>
+        <!-- boxs -->
+        <div class="box" id="1" data-id="case"></div>
+        <div class="box" id="2" data-id="case"></div>
+        <div class="box" id="3" data-id="case"></div>
+        <div class="box" id="4" data-id="case"></div>
+        <div class="box" id="5" data-id="case"></div>
+        <div class="box" id="6" data-id="case"></div>
+        <div class="box" id="7" data-id="case"></div>
+        <div class="box" id="8" data-id="case"></div>
+        <div class="box" id="9" data-id="case"></div>
+        <!-- results -->
+        <div class="results" data-id="score" id="player1"><p>Player1</p><span>0</span><span> wins</span></div>
+        <div class="results" data-id="score" id="ties"><p>Ties</p><span>0</span></div>
+        <div class="results" data-id="score" id="player2"><p>Player2</p><span>0 </span><span> wins</span></div>
+        
+        
+    </div>
+    </main>
+    <!-- <footer>
+        <p>
+          Original project by
+          <a href="https://twitter.com/megfdev">@megfdev</a> and
+          <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
+        </p>
+  
+        <p>
+          Refactored by
+          <a href="https://twitter.com/zg_dev" style="color: var(--turquoise)"
+            >@zg_dev</a
+          >
+        </p>
+      </footer> -->
+      <!-- Modal that opens when game ends -->
+      <div id="modal" class="modal hidden">
+        <div class="modal-contents">
+            <p >
+                Player 1 wins!
+            </p>
+            <button>Play again</button>
+
+        </div>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
